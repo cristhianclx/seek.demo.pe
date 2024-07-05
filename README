@@ -1,0 +1,7 @@
+To review: seek.demo.pe
+
+To run in local:
+
+    docker-compose build --no-cache
+    docker-compose run --service-ports api-bash
+    ./scripts/run.sh

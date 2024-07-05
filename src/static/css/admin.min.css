@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+.inner-two-columns .inner-right-column.fixed {
+  position: absolute !important;
+}
+body, input, button, textarea, select {
+  font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+select {
+  width: 240px !important;
+}
+textarea {
+  width: 100% !important;
+  height: 240px !important;
+}

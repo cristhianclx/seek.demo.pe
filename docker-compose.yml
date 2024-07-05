@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  database:
+    container_name: database
+    image: mongo:7
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: bbdd
+    volumes:
+      - database:/data/db
+  api:
+    build: .
+    command: /bin/bash -c "/code/scripts/wait/tcp.sh database 27017 &&
+                           /code/scripts/settings/docker.sh &&
+                           /code/scripts/venv.sh &&
+                           /code/scripts/migrations/run.sh &&
+                           /code/scripts/data.sh &&
+                           /code/scripts/run.sh"
+    depends_on:
+      - database
+    environment:
+      PORT: 8000
+    links:
+      - database
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/code
+  api-bash:
+    build: .
+    command: /bin/bash -c "/code/scripts/wait/tcp.sh database 27017 &&
+                           /code/scripts/settings/docker.sh &&
+                           /code/scripts/venv.sh &&
+                           /code/scripts/migrations/run.sh &&
+                           /code/scripts/data.sh &&
+                           /bin/bash"
+    depends_on:
+      - database
+    environment:
+      PORT: 8000
+    links:
+      - database
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/code
+  api-test:
+    build: .
+    command: /bin/bash -c "/code/scripts/wait/tcp.sh database 27017 &&
+                           /code/scripts/settings/docker.sh &&
+                           /code/scripts/venv.sh &&
+                           /code/scripts/migrations/run.sh &&
+                           /code/scripts/test.sh"
+    depends_on:
+      - database
+    environment:
+      PORT: 8000
+    links:
+      - database
+volumes:
+  database:
