@@ -37,12 +37,16 @@ class UserTests(TestCase):
         self.assertEqual(User.objects.filter(email=data["email"]).all().count(), 1)
 
     def test_login(self):
-        url = reverse("knox_login")
-        self.client.credentials(HTTP_AUTHORIZATION=get_basic_auth_header(self.user_email, self.user_password))
-        response = self.client.post(url, json={})
+        url = reverse("auth-login")
+        response = self.client.post(
+            url,
+            {
+                "username": self.user_email,
+                "password": self.user_password,
+            },
+        )
         raw = response.json()
         self.assertEqual(response.status_code, 200)
-        self.assertIn("expiry", raw)
         self.assertIn("token", raw)
         self.assertEqual(raw["user"], {"email": self.user_email, "name": self.user_name})
 
