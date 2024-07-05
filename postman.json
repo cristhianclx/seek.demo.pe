@@ -1,0 +1,1641 @@
+{
+	"info": {
+		"_postman_id": "8c62f0a1-527f-440a-9d32-187636d98905",
+		"name": "API",
+		"description": "API - Documentation for SEEK\n\nContact Support:\n Email: seek@demo.pe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14454366"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "password-change",
+							"item": [
+								{
+									"name": "accounts users user password change",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"old_password\": \"<string>\",\n  \"new_password\": \"<string>\",\n  \"confirm_password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/accounts/users/password-change/"
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"old_password\": \"<string>\",\n  \"new_password\": \"<string>\",\n  \"confirm_password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{baseUrl}}/accounts/users/password-change/"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"old_password\": \"<string>\",\n  \"new_password\": \"<string>\",\n  \"confirm_password\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "accounts users create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<email>\",\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"password_confirm\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/accounts/users/"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<email>\",\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"password_confirm\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/accounts/users/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"<email>\",\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"password_confirm\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "accounts users partial update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/accounts/users/"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/accounts/users/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"email\": \"<email>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "auth login create",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": false
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"seek@demo.pe\", \"password\": \"123456\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/auth/login/"
+							},
+							"response": [
+								{
+									"name": "auth login create - error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"username\": \"seek@demo.pe\", \"password\": \"123\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/auth/login/"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 05 Jul 2024 23:12:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Server",
+											"value": "gunicorn"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+								},
+								{
+									"name": "auth login create - ok",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"username\": \"seek@demo.pe\", \"password\": \"123456\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/auth/login/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 05 Jul 2024 23:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "103"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Server",
+											"value": "gunicorn"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"97eadb318dd6c6c983d9bc1435416bb4dabb553b\",\n    \"user\": {\n        \"email\": \"seek@demo.pe\",\n        \"name\": \"cristhian\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "logout-all",
+					"item": [
+						{
+							"name": "auth logout-all create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseUrl}}/auth/logout-all/",
+								"description": "Log the user out of all sessions\nI.E. deletes all auth tokens for the user"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": "{{baseUrl}}/auth/logout-all/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "auth logout create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseUrl}}/auth/logout/"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": "{{baseUrl}}/auth/logout/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "main",
+			"item": [
+				{
+					"name": "books",
+					"item": [
+						{
+							"name": "average-price",
+							"item": [
+								{
+									"name": "{year}",
+									"item": [
+										{
+											"name": "main books average price",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/main/books/average-price/:year/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"main",
+														"books",
+														"average-price",
+														":year",
+														""
+													],
+													"variable": [
+														{
+															"key": "year",
+															"value": "2024",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "main books average price - ok",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+																"type": "text"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/main/books/average-price/:year/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"main",
+																"books",
+																"average-price",
+																":year",
+																""
+															],
+															"variable": [
+																{
+																	"key": "year",
+																	"value": "2024",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Date",
+															"value": "Fri, 05 Jul 2024 23:18:42 GMT"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Content-Length",
+															"value": "41"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Server",
+															"value": "gunicorn"
+														},
+														{
+															"key": "Allow",
+															"value": "GET, HEAD, OPTIONS"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Access-Control-Allow-Credentials",
+															"value": "true"
+														},
+														{
+															"key": "Access-Control-Allow-Headers",
+															"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+														},
+														{
+															"key": "Access-Control-Allow-Methods",
+															"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "Referrer-Policy",
+															"value": "same-origin"
+														},
+														{
+															"key": "Cross-Origin-Opener-Policy",
+															"value": "same-origin"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"year\": \"2024\",\n    \"price\": {\n        \"average\": 36.87\n    }\n}"
+												},
+												{
+													"name": "main books average price - error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+																"type": "text"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/main/books/average-price/:year/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"main",
+																"books",
+																"average-price",
+																":year",
+																""
+															],
+															"variable": [
+																{
+																	"key": "year",
+																	"value": "2028",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Date",
+															"value": "Fri, 05 Jul 2024 23:19:08 GMT"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Content-Length",
+															"value": "70"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Server",
+															"value": "gunicorn"
+														},
+														{
+															"key": "Allow",
+															"value": "GET, HEAD, OPTIONS"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Access-Control-Allow-Credentials",
+															"value": "true"
+														},
+														{
+															"key": "Access-Control-Allow-Headers",
+															"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+														},
+														{
+															"key": "Access-Control-Allow-Methods",
+															"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "Referrer-Policy",
+															"value": "same-origin"
+														},
+														{
+															"key": "Cross-Origin-Opener-Policy",
+															"value": "same-origin"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"year\": \"2028\",\n    \"price\": {\n        \"average\": \"No data available for this year.\"\n    }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "genres",
+							"item": [
+								{
+									"name": "main books genres",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+												"type": "text"
+											}
+										],
+										"url": "{{baseUrl}}/main/books/genres/"
+									},
+									"response": [
+										{
+											"name": "main books genres - ok",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+														"type": "text"
+													}
+												],
+												"url": "{{baseUrl}}/main/books/genres/"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Fri, 05 Jul 2024 23:17:31 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "145"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Server",
+													"value": "gunicorn"
+												},
+												{
+													"key": "Allow",
+													"value": "GET, HEAD, OPTIONS"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Access-Control-Allow-Headers",
+													"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+												},
+												{
+													"key": "Access-Control-Allow-Methods",
+													"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "same-origin"
+												},
+												{
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "same-origin"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": \"FICTION\",\n        \"name\": \"Fiction\"\n    },\n    {\n        \"id\": \"NON_FICTION\",\n        \"name\": \"Non-fiction\"\n    },\n    {\n        \"id\": \"SCIENCE\",\n        \"name\": \"Science\"\n    },\n    {\n        \"id\": \"HISTORY\",\n        \"name\": \"History\"\n    }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "main books read",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/main/books/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"main",
+												"books",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "a9606f17-2774-41c9-b7b4-01ff5009e555",
+													"description": "(Required) A UUID string identifying this Book."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "main books read - ok",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/main/books/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"main",
+														"books",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "a9606f17-2774-41c9-b7b4-01ff5009e555",
+															"description": "(Required) A UUID string identifying this Book."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Fri, 05 Jul 2024 23:20:31 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "260"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Server",
+													"value": "gunicorn"
+												},
+												{
+													"key": "Allow",
+													"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Access-Control-Allow-Headers",
+													"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+												},
+												{
+													"key": "Access-Control-Allow-Methods",
+													"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "same-origin"
+												},
+												{
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "same-origin"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"a9606f17-2774-41c9-b7b4-01ff5009e555\",\n    \"title\": \"Say Compare Call Father\",\n    \"author\": \"Angela Jenkins\",\n    \"published_date\": \"2022-05-31\",\n    \"genre\": \"NON_FICTION\",\n    \"price\": 12.7,\n    \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n    \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n}"
+										}
+									]
+								},
+								{
+									"name": "main books update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/main/books/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"main",
+												"books",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<uuid>",
+													"description": "(Required) A UUID string identifying this Book."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/main/books/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"main",
+														"books",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "main books partial update",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/main/books/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"main",
+												"books",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<uuid>",
+													"description": "(Required) A UUID string identifying this Book."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/main/books/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"main",
+														"books",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "main books delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/main/books/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"main",
+												"books",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<uuid>",
+													"description": "(Required) A UUID string identifying this Book."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/main/books/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"main",
+														"books",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "main books list",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/main/books/"
+							},
+							"response": [
+								{
+									"name": "main books list - ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+												"type": "text"
+											}
+										],
+										"url": "{{baseUrl}}/main/books/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 05 Jul 2024 23:16:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "5113"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Server",
+											"value": "gunicorn"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 100,\n    \"num_pages\": 5,\n    \"page\": 1,\n    \"next\": \"http://seek.demo.pe/api/main/books/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"a9606f17-2774-41c9-b7b4-01ff5009e555\",\n            \"title\": \"Say Compare Call Father\",\n            \"author\": \"Angela Jenkins\",\n            \"published_date\": \"2022-05-31\",\n            \"genre\": \"NON_FICTION\",\n            \"price\": 12.7,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"a7721ff7-6b3b-4e4f-a26b-0f67b9989008\",\n            \"title\": \"Instead Behind\",\n            \"author\": \"William Johnson\",\n            \"published_date\": \"2020-12-03\",\n            \"genre\": \"HISTORY\",\n            \"price\": 14.1,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"9171e68c-5d26-47ad-8372-824ed4db1294\",\n            \"title\": \"Happen Wind Floor Middle\",\n            \"author\": \"Barbara Holmes\",\n            \"published_date\": \"2024-05-08\",\n            \"genre\": \"HISTORY\",\n            \"price\": 33.4,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"114aa602-7375-4052-972a-365f56ed4d56\",\n            \"title\": \"Event Operation Conference\",\n            \"author\": \"Andrew Harris\",\n            \"published_date\": \"2018-01-03\",\n            \"genre\": \"HISTORY\",\n            \"price\": 23.7,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"d30d428d-f089-4365-a0ba-853832e20dae\",\n            \"title\": \"Crime Anyone Year\",\n            \"author\": \"Laura Smith\",\n            \"published_date\": \"2017-06-04\",\n            \"genre\": \"FICTION\",\n            \"price\": 22.1,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"6f1b9a83-af54-49df-9139-982c69ad6386\",\n            \"title\": \"Bank Reveal\",\n            \"author\": \"Amber Bates\",\n            \"published_date\": \"2017-08-18\",\n            \"genre\": \"FICTION\",\n            \"price\": 38.6,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"9888dca7-872b-4d89-b42b-ee82fcedced7\",\n            \"title\": \"Window Nation\",\n            \"author\": \"Olivia Ramos\",\n            \"published_date\": \"2021-03-18\",\n            \"genre\": \"FICTION\",\n            \"price\": 14.3,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"38f3c30d-b6c4-4272-a92e-303c04f87665\",\n            \"title\": \"Rise Issue\",\n            \"author\": \"Miss Annette Owens\",\n            \"published_date\": \"2020-09-12\",\n            \"genre\": \"FICTION\",\n            \"price\": 12.2,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"5b0c08e6-6fb5-44c0-956e-2bdec6dbdedc\",\n            \"title\": \"Likely Course\",\n            \"author\": \"Adam Wilson\",\n            \"published_date\": \"2021-03-06\",\n            \"genre\": \"NON_FICTION\",\n            \"price\": 16.7,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"46408ce2-7a81-4544-840c-dc4050238f94\",\n            \"title\": \"You Really\",\n            \"author\": \"John Collins\",\n            \"published_date\": \"2014-09-25\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 47.3,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"1fb1038f-c6f2-4a36-b325-3b6ba5bb75c1\",\n            \"title\": \"Show While\",\n            \"author\": \"Sierra Rodriguez\",\n            \"published_date\": \"2016-09-18\",\n            \"genre\": \"FICTION\",\n            \"price\": 48.8,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"0a4ec446-d599-4d57-b7cd-375edf823ac7\",\n            \"title\": \"Term Challenge\",\n            \"author\": \"Terry Mccoy\",\n            \"published_date\": \"2020-09-30\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 32.5,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"9f81af21-3f2b-4c99-9d54-6ad1f3cc3038\",\n            \"title\": \"Air Nation Black According\",\n            \"author\": \"Stephanie Rivera\",\n            \"published_date\": \"2016-09-12\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 23.6,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"a00be364-7a08-436e-8e89-d6b94075a039\",\n            \"title\": \"Point Government My\",\n            \"author\": \"Eric Pitts\",\n            \"published_date\": \"2023-07-13\",\n            \"genre\": \"NON_FICTION\",\n            \"price\": 21.2,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"b15f99e5-636a-4920-bbf9-ec13a538938d\",\n            \"title\": \"Single Player Stand\",\n            \"author\": \"Bruce Golden\",\n            \"published_date\": \"2016-07-20\",\n            \"genre\": \"FICTION\",\n            \"price\": 11.4,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"b1b9417b-8d4d-4d77-ba47-9dde95b32482\",\n            \"title\": \"Once Degree\",\n            \"author\": \"Richard Diaz\",\n            \"published_date\": \"2018-04-02\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 36.8,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"d3d11621-966a-40c7-b645-355d706bd5a2\",\n            \"title\": \"Down Of Next\",\n            \"author\": \"Michael Johnson\",\n            \"published_date\": \"2015-05-03\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 26.5,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"717747c1-9fa6-4864-b43e-d9f0fce8ac4b\",\n            \"title\": \"Feel Conference\",\n            \"author\": \"Laurie Evans\",\n            \"published_date\": \"2022-04-29\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 35.9,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"99c16033-ae9a-4e65-b62a-a0db0da540a5\",\n            \"title\": \"Sell Program Feel\",\n            \"author\": \"Darius Wolf\",\n            \"published_date\": \"2015-01-14\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 42.3,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        },\n        {\n            \"id\": \"bcdf33c0-c047-4823-9fbb-3ba125989f7b\",\n            \"title\": \"Man Network Manage Still\",\n            \"author\": \"Jacob Berry\",\n            \"published_date\": \"2017-05-13\",\n            \"genre\": \"SCIENCE\",\n            \"price\": 42.5,\n            \"created\": \"2024-07-05T16:44:52.695000-05:00\",\n            \"updated\": \"2024-07-05T16:44:52.695000-05:00\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "main books create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/main/books/"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/main/books/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"<string>\",\n  \"author\": \"<string>\",\n  \"published_date\": \"<date>\",\n  \"genre\": \"NON_FICTION\",\n  \"price\": \"<string>\",\n  \"id\": \"<uuid>\",\n  \"created\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "me",
+			"item": [
+				{
+					"name": "me list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/me/"
+					},
+					"response": [
+						{
+							"name": "me list - ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token 97eadb318dd6c6c983d9bc1435416bb4dabb553b",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/me/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 05 Jul 2024 23:21:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "accept, accept-encoding, authorization, content-type, dnt, origin, user-agent, x-csrftoken, x-requested-with"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, HEAD, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"seek@demo.pe\",\n    \"name\": \"cristhian\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "inherit",
+		"inherit": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://seek.demo.pe/api"
+		}
+	]
+}

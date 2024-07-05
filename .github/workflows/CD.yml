@@ -5,6 +5,10 @@ on:
 
 name: CD
 
+env:
+  MONGODB_ATLAS_PUBLIC_API_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+  MONGODB_ATLAS_PRIVATE_API_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
+
 jobs:
   infrastructure:
     runs-on: ubuntu-22.04
