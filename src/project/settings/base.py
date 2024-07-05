@@ -190,7 +190,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 ##
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "knox.auth.TokenAuthentication",
