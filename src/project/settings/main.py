@@ -75,6 +75,9 @@ DATABASES = {
 ## s3
 ##
 
+DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
+STATICFILES_STORAGE = "storages.backends.s3.S3Storage"
+
 AWS_S3_STATIC = "static-seek.demo.pe"
 
 AWS_STORAGE_BUCKET_NAME = AWS_S3_STATIC
