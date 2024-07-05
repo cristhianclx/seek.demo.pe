@@ -193,9 +193,9 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",),
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
     "DEFAULT_AUTHENTICATION_CLASSES": (
+        "knox.auth.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.BasicAuthentication",
-        "knox.auth.TokenAuthentication",
     ),
     "DEFAULT_PAGINATION_CLASS": "base.utils.Pagination",
     "PAGE_SIZE": 20,
@@ -215,13 +215,14 @@ REST_FRAMEWORK = {
 KNOX_TOKEN_MODEL = "knox.AuthToken"
 
 REST_KNOX = {
+    "SECURE_HASH_ALGORITHM": "cryptography.hazmat.primitives.hashes.SHA512",
     "AUTH_TOKEN_CHARACTER_LENGTH": 64,
     "TOKEN_TTL": timedelta(hours=10),
     "USER_SERIALIZER": "accounts.serializers.UserSerializer",
     "TOKEN_LIMIT_PER_USER": None,
     "AUTO_REFRESH": False,
     "MIN_REFRESH_INTERVAL": 60,
-    "AUTH_HEADER_PREFIX": "Bearer",
+    "AUTH_HEADER_PREFIX": "Token",
     "EXPIRY_DATETIME_FORMAT": api_settings.DATETIME_FORMAT,
     "TOKEN_MODEL": "knox.AuthToken",
 }
