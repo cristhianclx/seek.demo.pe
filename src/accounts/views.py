@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from knox.views import LoginView as KnoxLoginView
 from rest_framework import permissions, status, viewsets
-from rest_framework.authentication import BasicAuthentication
+from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -12,10 +12,19 @@ from .models import User
 from .serializers import UserCreateSerializer, UserPasswordChangeSerializer, UserSerializer
 
 
-class AuthLoginView(KnoxLoginView):
-    authentication_classes = [
-        BasicAuthentication,
-    ]
+class AuthLoginView(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data, context={"request": request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data["user"]
+        token, created = Token.objects.get_or_create(user=user)
+        return Response(
+            {
+                "token": token.key,
+                "user": UserSerializer(user).data,
+            }
+        )
 
 
 class AccountsViewSet(

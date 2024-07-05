@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from datetime import timedelta
 from os import path as os_path
 
-from rest_framework.settings import api_settings
 from unipath import Path as unipath__Path
 
 ##
@@ -50,7 +48,7 @@ INSTALLED_APPS = [
     # others
     "django_filters",
     "rest_framework",
-    "knox",
+    "rest_framework.authtoken",
     "drf_yasg",  # docs
     # site
     "jazzmin",
@@ -193,9 +191,9 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "knox.auth.TokenAuthentication",
-        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
     ),
     "DEFAULT_PAGINATION_CLASS": "base.utils.Pagination",
     "PAGE_SIZE": 20,
@@ -205,25 +203,6 @@ REST_FRAMEWORK = {
         "rest_framework.filters.SearchFilter",
     ),
     "COERCE_DECIMAL_TO_STRING": False,
-}
-
-
-##
-## knox
-##
-
-KNOX_TOKEN_MODEL = "knox.AuthToken"
-
-REST_KNOX = {
-    "AUTH_TOKEN_CHARACTER_LENGTH": 64,
-    "TOKEN_TTL": timedelta(hours=10),
-    "USER_SERIALIZER": "accounts.serializers.UserSerializer",
-    "TOKEN_LIMIT_PER_USER": None,
-    "AUTO_REFRESH": False,
-    "MIN_REFRESH_INTERVAL": 60,
-    "AUTH_HEADER_PREFIX": "Token",
-    "EXPIRY_DATETIME_FORMAT": api_settings.DATETIME_FORMAT,
-    "TOKEN_MODEL": "knox.AuthToken",
 }
 
 
@@ -274,15 +253,12 @@ JAZZMIN_SETTINGS = {
     "order_with_respect_to": [
         "accounts",
         "main",
-        "knox",
     ],
     "icons": {
         "accounts": "fas fa-users-cog",
         "accounts.user": "fas fa-user",
         "main": "fas fa-star",
         "main.book": "fas fa-book",
-        "knox": "fas fa-sign",
-        "knox.token": "fas fa-sign-in-alt",
     },
     "default_icon_parents": "fas fa-book",
     "default_icon_children": "fas fa-book-open",
