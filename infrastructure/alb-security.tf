@@ -35,15 +35,15 @@ resource "aws_security_group" "instances" {
   vpc_id      = local.vpc_id
 
   ingress {
-    protocol        = "tcp"
-    from_port       = "22"
-    to_port         = "22"
+    protocol    = "tcp"
+    from_port   = "22"
+    to_port     = "22"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    protocol    = "tcp"
-    from_port   = "80"
-    to_port     = "80"
+    protocol        = "tcp"
+    from_port       = "80"
+    to_port         = "80"
     security_groups = [aws_security_group.alb.id]
   }
   egress {

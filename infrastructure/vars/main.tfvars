@@ -2,8 +2,8 @@ stage = "main"
 
 main = "seek.demo.pe"
 
-name     = "seek.demo.pe"
-static   = "static-seek.demo.pe"
+name   = "seek.demo.pe"
+static = "static-seek.demo.pe"
 
 image_name  = "debian-12-amd64-*"
 image_owner = "136693071363"
