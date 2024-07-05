@@ -1,0 +1,39 @@
+on:
+  pull_request:
+    branches:
+    - main
+
+name: CI
+
+jobs:
+  infrastructure-plan:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: configure-aws-credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+    - name: terraform-setup
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: 1.9.1
+    - name: stage
+      run: echo "STAGE=${GITHUB_BASE_REF##*/}" >> $GITHUB_ENV
+    - name: run
+      run: |
+        cd ./infrastructure/
+        terraform fmt -check -diff -recursive -no-color
+        terraform init -backend=true -get=true -reconfigure -upgrade
+        terraform workspace select -or-create $STAGE
+        terraform plan -no-color -refresh=true -var-file=./vars/$STAGE.tfvars
+  code-test:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: run
+      run: docker-compose -f "docker-compose.yml" run api-test
