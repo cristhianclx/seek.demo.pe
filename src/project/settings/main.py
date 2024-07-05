@@ -75,7 +75,7 @@ DATABASES = {
 ## s3
 ##
 
-AWS_S3_STATIC = "static-server.deflection.ai"
+AWS_S3_STATIC = "static-seek.demo.pe"
 
 AWS_STORAGE_BUCKET_NAME = AWS_S3_STATIC
 
