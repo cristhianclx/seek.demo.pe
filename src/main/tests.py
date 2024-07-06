@@ -40,6 +40,12 @@ class BookViewSetTest(TestCase):
             price=fake.random_number(digits=2),
         )
 
+    def test_list_books(self):
+        url = reverse("books-list")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.json()["results"]), 2)
+
     @patch("pymongo.collection.Collection.aggregate")
     def test_average_price(self, mock_aggregate):
         mock_aggregate.return_value = [{"_id": None, "price_average": Decimal128("25.00")}]
@@ -62,12 +68,6 @@ class BookViewSetTest(TestCase):
         expected_data = [{"id": genre_choice[0], "name": genre_choice[1]} for genre_choice in BOOK_GENRE_CHOICES]
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertListEqual(response.data, expected_data)
-
-    def test_list_books(self):
-        url = reverse("books-list")
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 2)
 
     def test_retrieve_book(self):
         book = Book.objects.first()

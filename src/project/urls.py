@@ -60,7 +60,7 @@ urlpatterns = [
     path(r"admin/", admin.site.urls),
     path(r"i18n/", include("django.conf.urls.i18n")),
     # auth
-    path(r"{}auth/login/".format(settings.API_PREFIX), AuthLoginView.as_view()),
+    path(r"{}auth/login/".format(settings.API_PREFIX), AuthLoginView.as_view(), name="auth-login"),
     # API
     path(
         r"{}me/".format(settings.API_PREFIX),
