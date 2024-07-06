@@ -172,7 +172,7 @@ def _filter_hosts(name, stage):
         for reservation in instances["Reservations"]:
             for instance in reservation["Instances"]:
                 if instance["State"]["Name"] == "running":
-                    DNS.append(str(instance["PrivateIpAddress"]))
+                    DNS.append(str(instance["PublicIpAddress"]))
     DNS = sorted(DNS)
     print(colored(" - ".join(DNS), "white", attrs=["bold"]))
     print(colored("Filtered instances by tags", "green"))
