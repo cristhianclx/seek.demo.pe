@@ -155,7 +155,7 @@ def get_instances_hosts(c, stage):
         }
         for i in instances
     ]
-    instances_hosts = [Connection(**i, gateway=Connection(**instance_door)) for i in instances_hosts]
+    instances_hosts = [Connection(**i) for i in instances_hosts]
     print(colored("Obtained instances", "green", attrs=["bold"]))
 
 
