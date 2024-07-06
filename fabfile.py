@@ -94,7 +94,6 @@ def instances_deploy(c, stage):
         if h_index == 0:
             actions_only_once(h, stage)
         supervisorctl(h, stage)
-        logs(h, stage)
         nginx(h)
         print(colored("Deployed", "white", attrs=["bold"]))
 
